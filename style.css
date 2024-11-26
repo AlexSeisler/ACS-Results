@@ -156,7 +156,6 @@ button{
     flex-direction: column; 
     font-family: 'Ubuntu';
     font-weight: 500;
-    background-color: #0e0e0c;
     z-index: 1;
     position: fixed;
     top: 0;
@@ -164,15 +163,15 @@ button{
 }
 /*header*/
     .tiny-icon{
-        font-size:120%;
+        font-size:250%;
         display:block;
         color:white;
         --ionicon-stroke-width:20px;
     }
     .header-text{
-        color:#16498b;;
+        color:white;
         font-size:25px;
-        background-color:black;
+        background-color:#16498b;
         cursor:pointer;
     }
     .top_header{
@@ -195,7 +194,7 @@ button{
         text-transform: uppercase;
         font-family: 'Ubuntu';
         font-size: 5vh;
-        color: rgb(226, 226, 226);
+        color: rgb(185, 183, 183);
     }
     #header-title:after{
         display:block;
@@ -209,21 +208,72 @@ button{
         display:flex;
         gap:25px;
     }
-    .header-contact-box{
-        display:flex;
-        align-items: center;
-        gap:10px;
+    /* Parent container styling */
+    /* Anchor tag wrapping the entire div */
+.header-contact-link {
+    text-decoration: none; /* Remove default underline */
+    display: block; /* Make the entire div clickable */
+}
 
-    }
-    .circle1{
-        height:40px;
-        width:40px;
-        background-color: #16498b;;
-        border-radius: 25px;
-        display:flex;
-        justify-content: center;
-        align-items:center;
-    }
+/* Parent container styling */
+.header-contact-box {
+    display: flex;
+    background-color: #16498b; /* Primary color */
+    border-radius: 5px;
+    padding: 15px;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Circle button styling */
+.circle1 {
+    height: 40px;
+    width: 40px;
+    background-color: #16498b; /* Matches main container by default */
+    border-radius: 50%; /* Ensure perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Icon inside the circle */
+.circle1 ion-icon {
+    font-size: 20px; /* Adjust for appropriate size */
+    color: #ffffff; /* White for high contrast */
+}
+
+/* Text styling */
+.header-contact-box .header-text {
+    font-size: 1.5rem; /* Adjust for readability */
+    font-weight: 600; /* Make text stand out */
+    color: #ffffff; /* Matches the overall color theme */
+    margin: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover effect for the entire container */
+.header-contact-box:hover {
+    background-color: #133c73; /* Darken slightly on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+.header-contact-box:hover .header-text {
+    background-color: #133c73;
+}
+
+/* Hover effect for the circle */
+.circle1:hover {
+    background-color: #0e2d55; /* Darker shade for hover */
+    transform: scale(1.1); /* Slight enlarge effect */
+}
+
+
+
     .bottom_header{
         display:flex;
         justify-content: center;
@@ -262,7 +312,7 @@ button{
     }
 }
 .tagline{
-    background-image:  linear-gradient(rgba(0,0,0,0.7), rgb(0,0,0,0.7)), url('images/background.webp');
+    background-image:  linear-gradient(rgba(0,0,0,0.8), rgb(0,0,0,0.7)), url('images/background.webp');
     background-size:cover;
     object-fit: contain;
     background-attachment: fixed;
@@ -270,7 +320,7 @@ button{
     height: 100vh;
     background-color: transparent;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     font-size: 170%;
@@ -281,8 +331,11 @@ button{
 /*front page*/
     #tag{
         margin-left:20px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 230%;
+        font-family: 'Montserrat', sans-serif; /* Choose your preferred font family */
+        font-weight: 600; /* Makes the font bold */
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 250%;
         line-height: 200%;
         width: 80%;
     }
@@ -384,6 +437,7 @@ button{
         .card .info{
             letter-spacing: 3px;
             color: white;
+            text-align: center;
         }
 .section2{
     background-color: rgb(14, 14, 12);
@@ -415,23 +469,28 @@ button{
     .area{
         display:flex;
         justify-content: center;
+        align-items: center;
+        outline:2px solid white;
     }
     .general-templates{
         margin: 0 auto;
-        width:68%;
+        width:100%;
         display:flex;
         justify-content: center;
         align-items: center;
+        align-content: center;
         flex-wrap: wrap;
-        gap:5px;
+        gap:20px;
     }
     /* example website anchors */
         .overflow-hidden-4x4{
             position: relative;
-            width: 49%;
+            width: 45%;
             display: flex;
             overflow: hidden;
             border-radius: 10px;
+            
+            
         }
         .template{
             height:300px;
@@ -477,10 +536,7 @@ button{
             flex-direction: column;
             gap: 20px;
         }
-        .overflow-hidden-4x4{
-            width: 100%;
 
-        }
     }
     .majors-involved{
         display:flex;

@@ -43,6 +43,37 @@ button{
     text-decoration: none;
     border-radius: 8px;
 }
+#theVideo {
+    width: 100%;
+    height: auto;  /* Ensures the aspect ratio is maintained */
+    max-width: 800px; /* Limit the size if you don't want it to grow too large */
+    max-height: 100%; /* Ensures video doesn't exceed the container's height */
+}
+
+.missionText{
+    width:400px;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color:white;
+}
+.mission{
+    display:flex;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom: 20px;
+
+}
+.theVideo{
+    width:100%;
+}
+
+.section3{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 #group{
     background-color: #2156fc;
 }
@@ -144,6 +175,15 @@ button{
     #microsoft-form{
         height: 20vh;
 
+    }
+    .mission{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    #mission{
+        width:500px;
     }
 
 }
@@ -310,6 +350,15 @@ button{
     #stevens-logo{
         height: 80px;
     }
+    .mission{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    #mission{
+        width:500px;
+    }
 }
 .tagline{
     background-image:  linear-gradient(rgba(0,0,0,0.8), rgb(0,0,0,0.7)), url('images/background.webp');
@@ -473,19 +522,15 @@ button{
         outline:2px solid white;
     }
     .general-templates{
-        margin: 0 auto;
-        width:100%;
         display:flex;
         justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-wrap: wrap;
-        gap:20px;
+        padding:20px;
+        gap:20px
     }
     /* example website anchors */
         .overflow-hidden-4x4{
             position: relative;
-            width: 45%;
+            width: 80%;
             display: flex;
             overflow: hidden;
             border-radius: 10px;
@@ -532,9 +577,10 @@ button{
     
     @media only screen and (max-width: 768px){
         .general-templates{
-            width: 80%;
+            display:flex;
+            align-items: center;
+            width: 100%;
             flex-direction: column;
-            gap: 20px;
         }
 
     }

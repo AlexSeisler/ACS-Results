@@ -841,7 +841,6 @@ button{
         align-items: center;
         background-color: #F4F4F4;
         gap:20px;
-        overflow-x: scroll;
         
     }
     /*price cards*/
@@ -991,6 +990,7 @@ button{
     }
     .option{
         width: 70vw;
+        overflow-x: scroll;
     }
     #proFix{
         margin-left:150px;

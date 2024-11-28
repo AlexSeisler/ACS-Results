@@ -74,6 +74,63 @@ button{
     align-items: center;
     justify-content: center;
 }
+.but{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.example-btn {
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    border-radius: 25px;
+    background-color: #16498b;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none; /* Remove underline on link */
+}
+
+/* Hover effect */
+.example-btn:hover {
+    background-color: #103a6b;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus effect for accessibility */
+.example-btn:focus {
+    outline: none;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 4px rgba(22, 73, 139, 0.6); /* Light blue glow */
+}
+
+/* Active effect */
+.example-btn:active {
+    background-color: #0d2a53;
+    transform: scale(1.05); /* Slightly shrinks when clicked */
+}
+
+/* Disabled state */
+.example-btn:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Focus-visible for keyboard navigation */
+.example-btn:focus-visible {
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 4px rgba(22, 73, 139, 0.6);
+}
 #group{
     background-color: #2156fc;
 }
@@ -787,10 +844,11 @@ button{
     }
     /*price cards*/
         .option{
+            display:flex;
+            flex-direction: column;
             background-color:white;
             padding:20px;
             width:400px;
-            height:430px;
             box-shadow:0 2px 19px #000000;
             text-align: center;
             border-radius: 5px;
@@ -916,6 +974,9 @@ button{
     .section5{
         height: max-content;
     }
+    .chance1{
+        font-size:1.5vh;
+    }
     .option{
         width: 50vw;
         height: 60vh;
@@ -948,22 +1009,59 @@ button{
     }
 }
 /* sign up button*/
-.signUp{
-    height:40px;
-    width:180px;
-    border-radius:20px;
-    outline:#16498b solid 2px;
-    border:none;
-    font-size:20px;
-    font-family:"Ubuntu";
-    font-weight:100;
-    color:#16498b;
-    background-color:white;
+.signUp {
+    height: 45px;
+    width: 200px;
+    border-radius: 30px;
+    outline: #16498b solid 2px;
+    border: none;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    color: #16498b;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none; /* Remove underline on link */
 }
-.signUp:hover{
+
+/* Hover effect */
+.signUp:hover {
     background-color: #16498b;
-    color:white;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Focus effect for accessibility */
+.signUp:focus {
+    outline: none;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 4px rgba(22, 73, 139, 0.6); /* Light blue glow */
+}
+
+/* Active effect */
+.signUp:active {
+    background-color: #0d2a53;
+    transform: scale(1.02); /* Slight shrink when clicked */
+}
+
+/* Disabled state */
+.signUp:disabled {
+    background-color: #b0b0b0;
+    color: #8c8c8c;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Focus-visible for keyboard navigation */
+.signUp:focus-visible {
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 4px rgba(22, 73, 139, 0.6);
+}
+
 .signUp-fixed{
     height:40px;
     width:180px;
@@ -1073,6 +1171,9 @@ button{
     .footer-info{
         flex-direction: column;
     }
+    .chance1{
+        font-size:1.5vh;
+    }
 }
 @media only screen and (max-width: 768px) {
     .site-footer{
@@ -1080,5 +1181,8 @@ button{
     }
     .fixed-button{
         z-index: 1;
+    }
+    .chance1{
+        font-size:1.5vh;
     }
 }

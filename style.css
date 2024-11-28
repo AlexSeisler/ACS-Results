@@ -838,21 +838,14 @@ button{
     .prices{
         display:flex;
         justify-content: center;
+        align-items: center;
         background-color: #F4F4F4;
-        gap:75px;
+        gap:20px;
+        overflow-x: scroll;
         
     }
     /*price cards*/
-        .option{
-            display:flex;
-            flex-direction: column;
-            background-color:white;
-            padding:20px;
-            width:400px;
-            box-shadow:0 2px 19px #000000;
-            text-align: center;
-            border-radius: 5px;
-        }
+
         .option {
             display: flex;
             flex-direction: column;
@@ -999,6 +992,9 @@ button{
     .option{
         width: 70vw;
     }
+    #proFix{
+        margin-left:150px;
+    }
     .section5{
         height: max-content;
     }
@@ -1042,6 +1038,7 @@ button{
     }
     .prices{
         gap: 10px;
+        overflow-x: scroll;
     }
 }
 /* sign up button*/

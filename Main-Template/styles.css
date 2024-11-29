@@ -3,47 +3,48 @@
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-  }
+}
 
-  .timeline {
+.timeline {
     overflow-y: scroll;
     max-height: 400px; /* Adjust height for better display */
-  }
+}
 
-  .timeline p {
+.timeline p {
     text-align: left;
-  }
+}
 
-  /* Custom Footer Styling */
-  .footer {
+/* Custom Footer Styling */
+.footer {
     background-color: #f1f1f1;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
-  }
+}
 
-  /* Custom styling for image cards */
-  .project-img {
+/* Custom styling for image cards */
+.project-img {
     max-width: 100%;
     border-radius: 10px;
-  }
+}
 
-  .project-img:hover {
+.project-img:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
-  }
+}
 
-  /* Modal Styling */
-  .modal-content {
+/* Modal Styling */
+.modal-content {
     background-color: #f8f9fa;
     text-align: center;
     padding: 20px;
-  }
+}
 
-  .modal-header {
+.modal-header {
     border-bottom: none;
-  }
-  /* Custom CSS for Profile Picture and Description */
+}
+
+/* Custom CSS for Profile Picture and Description */
 .modal-body .d-flex {
     align-items: center; /* Vertically center the items */
 }
@@ -58,18 +59,138 @@
     line-height: 1.6;
 }
 
-
-  /* Adjustments for profile section */
-  .profile-img {
+/* Adjustments for profile section */
+.profile-img {
     max-width: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
-  }
+}
 
-  .profile-info {
+.profile-info {
     text-align: left;
-  }
+}
 
+/* Projects Showcase Container */
+.projects-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Gap between items */
+    justify-content: space-between; /* Spread items evenly */
+}
 
-  /*----------Popup styling--------------*/
- 
+/* Base Style for Showcase Items */
+.showcase-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent content overflow */
+    position: relative;
+    border-radius: 5px;
+}
+
+/* View Showcase Button Styling */
+.showcase-button {
+    flex: 1 1 calc(33.33% - 10px); /* Default size for button */
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Image Styling */
+.showcase-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fills its container */
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.showcase-item img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    cursor: pointer;
+}
+
+/* Large Images */
+.showcase-item.large {
+    flex: 1 1 calc(66.66% - 10px); /* Takes up 2/3 of the row */
+    height: 300px; /* Set a uniform height for large items */
+}
+
+/* Medium Images */
+.showcase-item.medium {
+    flex: 1 1 calc(33.33% - 10px); /* Takes up 1/3 of the row */
+    height: 200px; /* Set a uniform height for medium items */
+}
+
+/* Small Images */
+.showcase-item.small {
+    flex: 1 1 calc(25% - 10px); /* Smaller size */
+    height: 150px; /* Set a uniform height for small items */
+}
+
+/* Styling for Before and After Pairs */
+.showcase-item.pair {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.showcase-item.pair .before,
+.showcase-item.pair .after {
+    flex: 1 1 calc(50% - 10px); /* Each takes up 50% of the width */
+}
+
+/* Before and After Images */
+.showcase-item.pair .before img,
+.showcase-item.pair .after img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Hover Effect for Before and After Images */
+.showcase-item.pair .before img:hover,
+.showcase-item.pair .after img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    cursor: pointer;
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .showcase-item.large {
+        flex: 1 1 calc(50% - 10px); /* Large items take half the row */
+        height: 250px;
+    }
+
+    .showcase-item.medium {
+        flex: 1 1 calc(50% - 10px); /* Medium items take half the row */
+        height: 180px;
+    }
+
+    .showcase-item.small {
+        flex: 1 1 calc(50% - 10px); /* Small items take half the row */
+        height: 150px;
+    }
+
+    .showcase-item.pair .before,
+    .showcase-item.pair .after {
+        flex: 1 1 100%; /* Stack Before/After images on top of each other on smaller screens */
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+    .showcase-item {
+        flex: 1 1 calc(100% - 10px); /* All items take full width */
+        height: auto; /* Let the height adjust naturally */
+    }
+
+    .showcase-item.pair .before,
+    .showcase-item.pair .after {
+        flex: 1 1 100%; /* Stack Before/After images on top of each other */
+    }
+}

@@ -67,23 +67,101 @@
       <!-- Right Column: Projects, Certifications, Skills -->
       <div class="col-lg-9 col-md-8 col-12">
         <!-- Project Showcase -->
-        <div class="section bg-light">
-          <h4>Projects Showcase</h4>
-          <div class="row g-2">
-            <div class="col-lg-6 col-md-6 col-6">
-              <img src="https://via.placeholder.com/200" alt="Project 1" class="img-fluid project-img">
+        <div class="container mt-5">
+            <h4 class="text-center mb-4">Projects Showcase</h4>
+            <div class="projects-showcase">
+                <!-- View Showcase Button -->
+                <div class="showcase-item showcase-button">
+                    <button class="btn btn-dark w-100 h-100 py-5" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                        View Showcase
+                    </button>
+                </div>
+        
+                <!-- Project Images with Different Sizes -->
+                <div class="showcase-item large">
+                    <img src="images/Contracting/project1-1.jpg" alt="Project 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                </div>
+                <div class="showcase-item medium">
+                    <img src="images/Contracting/project1-10.jpg" alt="Project 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                </div>
+                <div class="showcase-item medium">
+                    <img src="images/Contracting/project1-6.jpg" alt="Project 3" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                </div>
+                <div class="showcase-item medium">
+                    <img src="images/Contracting/project2-2.jpg" alt="Project 4" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                </div>
+        
+                <!-- Before and After Pairs -->
+                <div class="showcase-item pair">
+                    <!-- Before -->
+                    <div class="before">
+                        <img src="images/Contracting/project3-1.jpg" alt="Project 5" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                    </div>
+                    <!-- After -->
+                    <div class="after">
+                        <img src="images/Contracting/project3-6.jpg" alt="Project 6" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                    </div>
+                </div>
+        
+                <!-- Split Picture 7 into Two Smaller Pictures (Before and After) -->
+                <div class="showcase-item pair">
+                    <!-- Before -->
+                    <div class="before">
+                        <img src="images/Contracting/project1-5.jpg" alt="Project 7 Part 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                    </div>
+                    <!-- After -->
+                    <div class="after">
+                        <img src="images/Contracting/project1-10.jpg" alt="Project 7 Part 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-6">
-              <img src="https://via.placeholder.com/200" alt="Project 2" class="img-fluid project-img">
-            </div>
-            <div class="col-lg-4 col-md-4 col-6">
-              <img src="https://via.placeholder.com/150" alt="Project 3" class="img-fluid project-img">
-            </div>
-            <div class="col-lg-8 col-md-8 col-6">
-              <img src="https://via.placeholder.com/300x200" alt="Project 4" class="img-fluid project-img">
+        </div>
+        
+  
+          
+          
+          
+          <!-- Reuse the Carousel Modal Code from Before -->
+          <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="carouselModalLabel">Project Details</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://via.placeholder.com/600x400" class="d-block w-100" alt="Project 1">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Project 1</h5>
+                          <p>Description for project 1, styled like an Instagram post.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://via.placeholder.com/600x400" class="d-block w-100" alt="Project 2">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Project 2</h5>
+                          <p>Description for project 2, styled like an Instagram post.</p>
+                        </div>
+                      </div>
+                      <!-- Add other carousel items as needed -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          
 
         <!-- Certifications and Skills -->
         <div class="row mt-2">

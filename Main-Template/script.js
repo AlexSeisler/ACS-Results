@@ -3,3 +3,4 @@ window.onload = function () {
     var myModal = new bootstrap.Modal(document.getElementById('introModal'));
     myModal.show();
   };
+

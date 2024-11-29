@@ -197,3 +197,71 @@
         flex: 1 1 100%; /* Keep Before/After images stacked within each pair */
     }
 }
+
+/* General Styling for the Carousel Caption */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px 15px; /* Adds spacing around the text */
+    border-radius: 5px; /* Slight rounding for a cleaner look */
+    max-width: 100%; /* Allow the caption to span the full width of the carousel */
+    position: absolute; /* Ensure it's positioned relative to the carousel */
+    bottom: 0; /* Align the caption at the very bottom */
+    text-align: center; /* Center the text */
+    left: 0; /* Ensure it spans the full width */
+    right: 0; /* Ensure it spans the full width */
+}
+
+/* Styling for the Carousel Title (h5) */
+.carousel-caption h5 {
+    font-size: 1.5rem; /* Slightly smaller font size */
+    font-weight: bold; /* Bold for emphasis */
+    color: #fff; /* White text for good contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
+    margin-bottom: 5px; /* Spacing below the title */
+}
+
+/* Styling for the Carousel Description (p) */
+.carousel-caption p {
+    font-size: 1rem; /* Smaller font size for the description */
+    color: #eee; /* Light gray text */
+    line-height: 1.4; /* Improves text readability */
+    margin-bottom: 0; /* Remove unnecessary bottom margin */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+}
+
+/* Custom Modal Size for Larger Carousel */
+.custom-modal-size {
+    max-width: 90%; /* Increase modal width */
+    margin: 1.75rem auto; /* Center the modal with adjusted margins */
+}
+
+/* Styling for Carousel Images */
+.carousel-inner img {
+    height: 600px; /* Default image height for larger screens */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    width: 100%; /* Make sure the image doesn't overflow */
+}
+
+/* Caption Base Styling */
+.carousel-caption {
+    bottom: 0; /* Caption remains at the bottom */
+    font-size: 1rem; /* Maintain smaller, readable caption text */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+/* Adjustments for Smaller Screens (Mobile Responsiveness) */
+@media (max-width: 768px) {
+    .custom-modal-size {
+        max-width: 95%; /* Slightly reduce modal width for small screens */
+    }
+
+    .carousel-inner img {
+        height: 300px; /* Reduce image height for smaller screens */
+    }
+
+    .carousel-caption {
+        font-size: 0.875rem; /* Reduce font size for better readability */
+        padding: 5px; /* Reduce padding to avoid overflow */
+    }
+}
+

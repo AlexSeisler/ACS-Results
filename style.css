@@ -993,9 +993,6 @@ button{
     .option{
         width: 70vw;
     }
-    #proFix{
-        margin-left:150px;
-    }
     .section5{
         height: max-content;
     }
@@ -1224,5 +1221,27 @@ button{
         font-size:1.5vh;
     }
 }
+.item1 {
+order: 1; /* Default position */
+}
 
+.item2 {
+order: 2; /* Default position */
+}
+.item3 {
+order: 3; /* Default position */
+}
 
+/* Flipped Layout (for smaller screens) */
+@media (max-width: 768px) {
+.item1 {
+    order: 2; /* Move Item 1 to the second position */
+}
+.item2 {
+    order: 1; /* Move Item 2 to the first position */
+}
+.item3 {
+    order: 3;
+}
+
+}

@@ -132,65 +132,68 @@
 /* Styling for Before and After Pairs */
 .showcase-item.pair {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 10px; /* Space between Before and After images */
     width: 100%;
+    position: relative; /* Positioning for overlay labels */
+    align-items: stretch; /* Ensure images align properly vertically */
 }
 
 .showcase-item.pair .before,
 .showcase-item.pair .after {
-    flex: 1 1 calc(50% - 10px); /* Each takes up 50% of the width */
+    flex: 1; /* Each takes equal width */
+    position: relative; /* For overlay positioning */
+    overflow: hidden; /* Prevent content overflow */
 }
 
-/* Before and After Images */
 .showcase-item.pair .before img,
 .showcase-item.pair .after img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 5px;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: transform 0.3s ease; /* Hover zoom effect */
+    border-radius: 5px; /* Rounded corners */
 }
 
-/* Hover Effect for Before and After Images */
+/* Footer Overlay for Labels */
+.showcase-item.pair .before::after,
+.showcase-item.pair .after::after {
+    content: attr(data-label); /* Use data-label for dynamic text */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white; /* White text for contrast */
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    pointer-events: none; /* Prevent interaction with overlay */
+}
+
+/* Hover Effect */
 .showcase-item.pair .before img:hover,
 .showcase-item.pair .after img:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
     cursor: pointer;
 }
 
-/* Responsive Design for Tablets */
-@media (max-width: 768px) {
-    .showcase-item.large {
-        flex: 1 1 calc(50% - 10px); /* Large items take half the row */
-        height: 250px;
-    }
-
-    .showcase-item.medium {
-        flex: 1 1 calc(50% - 10px); /* Medium items take half the row */
-        height: 180px;
-    }
-
-    .showcase-item.small {
-        flex: 1 1 calc(50% - 10px); /* Small items take half the row */
-        height: 150px;
-    }
-
-    .showcase-item.pair .before,
-    .showcase-item.pair .after {
-        flex: 1 1 100%; /* Stack Before/After images on top of each other on smaller screens */
-    }
-}
-
-/* Responsive Design for Mobile */
+/* Responsive Design: Mobile */
 @media (max-width: 480px) {
-    .showcase-item {
-        flex: 1 1 calc(100% - 10px); /* All items take full width */
-        height: auto; /* Let the height adjust naturally */
+    .projects-showcase {
+        display: flex;
+        flex-wrap: wrap; /* Allow all items to wrap */
+        gap: 10px;
+    }
+
+    .showcase-item.pair {
+        flex: 1 1 calc(50% - 10px); /* Two pairs side-by-side on mobile */
     }
 
     .showcase-item.pair .before,
     .showcase-item.pair .after {
-        flex: 1 1 100%; /* Stack Before/After images on top of each other */
+        flex: 1 1 100%; /* Keep Before/After images stacked within each pair */
     }
 }

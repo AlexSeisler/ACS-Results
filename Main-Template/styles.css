@@ -1,0 +1,75 @@
+/* Additional custom styling */
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .timeline {
+    overflow-y: scroll;
+    max-height: 400px; /* Adjust height for better display */
+  }
+
+  .timeline p {
+    text-align: left;
+  }
+
+  /* Custom Footer Styling */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Custom styling for image cards */
+  .project-img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .project-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+  }
+
+  /* Modal Styling */
+  .modal-content {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .modal-header {
+    border-bottom: none;
+  }
+  /* Custom CSS for Profile Picture and Description */
+.modal-body .d-flex {
+    align-items: center; /* Vertically center the items */
+}
+
+.modal-body img {
+    border: 3px solid #007bff; /* Optional border around the image */
+    padding: 5px;
+}
+
+.modal-body p {
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    line-height: 1.6;
+}
+
+
+  /* Adjustments for profile section */
+  .profile-img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .profile-info {
+    text-align: left;
+  }
+
+
+  /*----------Popup styling--------------*/
+ 

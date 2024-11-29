@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio Layout</title>
+  <!-- Link to the Bootswatch Cosmo Theme -->
+  <link href="bootstrapThemes/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Modal Popup for Intro -->
+  <div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="introModalLabel">Welcome to My Portfolio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex">
+                    <!-- Profile Picture (Left Side) -->
+                    <div class="me-4" style="max-width: 150px;">
+                        <img src="path/to/profile.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                    </div>
+                    <!-- Description (Right Side) -->
+                    <div>
+                        <p>Hello! I'm John Doe, a passionate software developer with a focus on web technologies. I specialize in HTML, CSS, JavaScript, and React, and I'm excited to share my work with you!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="continueButton" data-bs-dismiss="modal">Continue to Portfolio</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="container-fluid px-3">
+    <!-- Desktop Layout -->
+    <div class="row">
+      <!-- Left Column: Profile and Timeline -->
+      <div class="col-lg-3 col-md-4 col-12">
+        <!-- Profile Section -->
+        <div class="section bg-light">
+          <h4>Profile</h4>
+          <img src="https://via.placeholder.com/150" alt="User Picture" class="profile-img">
+          <div class="profile-info">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+          </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="section timeline bg-light">
+          <h4>Timeline</h4>
+          <p><strong>Event 1:</strong> Started working at XYZ Company.</p>
+          <p><strong>Event 2:</strong> Completed Bachelor's Degree.</p>
+          <p><strong>Event 3:</strong> Achieved Certification A.</p>
+          <p><strong>Event 4:</strong> Launched Project Alpha.</p>
+          <p><strong>Event 5:</strong> Promoted to Senior Engineer.</p>
+        </div>
+      </div>
+
+      <!-- Right Column: Projects, Certifications, Skills -->
+      <div class="col-lg-9 col-md-8 col-12">
+        <!-- Project Showcase -->
+        <div class="section bg-light">
+          <h4>Projects Showcase</h4>
+          <div class="row g-2">
+            <div class="col-lg-6 col-md-6 col-6">
+              <img src="https://via.placeholder.com/200" alt="Project 1" class="img-fluid project-img">
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+              <img src="https://via.placeholder.com/200" alt="Project 2" class="img-fluid project-img">
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <img src="https://via.placeholder.com/150" alt="Project 3" class="img-fluid project-img">
+            </div>
+            <div class="col-lg-8 col-md-8 col-6">
+              <img src="https://via.placeholder.com/300x200" alt="Project 4" class="img-fluid project-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications and Skills -->
+        <div class="row mt-2">
+          <div class="col-lg-6 col-md-6 col-12 section bg-light">
+            <h4>Certifications</h4>
+            <ul class="list-unstyled">
+              <li>Certification A</li>
+              <li>Certification B</li>
+              <li>Certification C</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 section bg-light">
+            <h4>Skills</h4>
+            <ul class="list-unstyled">
+              <li>Skill 1: HTML</li>
+              <li>Skill 2: CSS</li>
+              <li>Skill 3: JavaScript</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="row mt-3">
+      <div class="col-12 section footer">
+        <h4>Contact & Footer</h4>
+        <p>Thank you for visiting!</p>
+        <p>Email: johndoe@example.com | Phone: (123) 456-7890</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (required for modal functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // JavaScript to trigger the modal on page load
+    window.onload = function () {
+      var myModal = new bootstrap.Modal(document.getElementById('introModal'));
+      myModal.show();
+    };
+  </script>
+</body>
+</html>

@@ -38,7 +38,6 @@ body {
   }
   
   .section:hover {
-    transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
   
@@ -57,6 +56,9 @@ body {
   .profile-card {
     max-width: 400px;
     margin: 0 auto;
+  }
+  .profile-card:hover{
+    transform: scale(1.05);
   }
   
   .profile-img {
@@ -573,7 +575,7 @@ body {
 
 .popup-profile-img {
     width: 100px;
-    height: 100px;
+    height: auto;
     border-radius: 50%;
     border: 3px solid #007bff;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -707,7 +709,43 @@ body {
     max-width: 90%;
     margin: 1.75rem auto;
   }
+  .view-showcase-text
+  {
+    font-size: 20px;
+  }
   
+
+/* Carousel control buttons with black background initially */
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for better visibility */
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Carousel control icons with darker background */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, .9); /* Black background for the icons */
+    width: 40px; /* Increase the size of the icons */
+    height: 40px; /* Increase the size of the icons */
+    border-radius: 50%; /* Keep them round */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the controls */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, .8); /* Ensure the button stays dark on hover */
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, .8); /* Darker background on hover */
+    transform: scale(1.2); /* Enlarge the icons on hover */
+}
+
+/* Position the controls properly (left and right) */
+
+
+
   @media (max-width: 768px) {
     .custom-modal-size {
       max-width: 95%;

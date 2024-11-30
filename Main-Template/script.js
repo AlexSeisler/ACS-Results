@@ -4,7 +4,7 @@
 window.onload = function () {
   setTimeout(function () {
       document.getElementById("introPopup").classList.add("show");
-  }, 500); // Delay to give the page time to load
+  }, 100); // Delay to give the page time to load
 };
 
 // Function to close the popup

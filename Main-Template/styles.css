@@ -751,26 +751,11 @@ body {
     }
   }
   
-  /* Theme 1: Modern Minimalist */
-  .theme1 {
-    --bg-color: #f5f5f5;
+ /* Global Styles */
+:root {
+    --bg-color: #f5f5f5; /* Default to theme1 */
     --text-color: #333;
     --section-bg: #fff;
     --accent-color: #007bff;
   }
   
-  /* Theme 2: Sleek Dark Mode */
-  .theme2 {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --section-bg: #1e1e1e;
-    --accent-color: #76c7c0;
-  }
-  
-  /* Theme 3: Bold Tech-Inspired */
-  .theme3 {
-    --bg-color: linear-gradient(135deg, #1f1f1f, #323232);
-    --text-color: #fff;
-    --section-bg: linear-gradient(135deg, #222222, #444444);
-    --accent-color: #ff9f00;
-}

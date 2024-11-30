@@ -13,22 +13,6 @@ function closePopup() {
 }
 
 
-  
-/*Themes*/
-  document.addEventListener("DOMContentLoaded", () => {
-    const themeSelector = document.getElementById("theme");
-  
-    // Change theme on selection
-    themeSelector.addEventListener("change", (event) => {
-      document.body.className = ""; // Reset current theme
-      document.body.classList.add(event.target.value); // Apply selected theme
-    });
-  
-    // Initialize with the first theme
-    themeSelector.value = "theme1";
-    document.body.classList.add("theme1");
-  });
-
 
 /*Timeline interactivity*/
   document.addEventListener("DOMContentLoaded", () => {

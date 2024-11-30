@@ -716,25 +716,15 @@ body {
   
 
 /* Carousel control buttons with black background initially */
-.carousel-control-prev, .carousel-control-next {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for better visibility */
-    border: none;
-    padding: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-}
+
 
 /* Carousel control icons with darker background */
 .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, .9); /* Black background for the icons */
+    background-color: rgba(0, 0, 0, 1); /* Black background for the icons */
     width: 40px; /* Increase the size of the icons */
     height: 40px; /* Increase the size of the icons */
     border-radius: 50%; /* Keep them round */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-}
-
-/* Hover effect for the controls */
-.carousel-control-prev:hover, .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, .8); /* Ensure the button stays dark on hover */
 }
 
 .carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {

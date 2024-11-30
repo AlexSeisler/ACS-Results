@@ -8,8 +8,17 @@
   <link href="bootstrapThemes/bootstrap.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <script src="script.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <div class="theme-selector">
+        <label for="theme">Choose Theme:</label>
+        <select id="theme">
+          <option value="theme1">Modern Minimalist</option>
+          <option value="theme2">Sleek Dark Mode</option>
+          <option value="theme3">Bold Tech-Inspired</option>
+        </select>
+      </div>
   <!-- Modal Popup for Intro -->
   <div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -54,15 +63,80 @@
         </div>
 
         <!-- Timeline Section -->
+        
+          
+
         <div class="section timeline bg-light">
-          <h4>Timeline</h4>
-          <p><strong>Event 1:</strong> Started working at XYZ Company.</p>
-          <p><strong>Event 2:</strong> Completed Bachelor's Degree.</p>
-          <p><strong>Event 3:</strong> Achieved Certification A.</p>
-          <p><strong>Event 4:</strong> Launched Project Alpha.</p>
-          <p><strong>Event 5:</strong> Promoted to Senior Engineer.</p>
-        </div>
+            <h4>Timeline</h4>
+            <div class="timeline-container">
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Started working at XYZ Company</h5>
+                  <p>January 2020</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Completed Bachelor's Degree</h5>
+                  <p>June 2021</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Achieved Certification A</h5>
+                  <p>December 2021</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Launched Project Alpha</h5>
+                  <p>March 2022</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Launched Project Alpha</h5>
+                  <p>March 2022</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Launched Project Alpha</h5>
+                  <p>March 2022</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Promoted to Senior Engineer</h5>
+                  <p>August 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
       </div>
+          
 
       <!-- Right Column: Projects, Certifications, Skills -->
       <div class="col-lg-9 col-md-8 col-12">

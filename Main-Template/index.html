@@ -19,32 +19,28 @@
           <option value="theme3">Bold Tech-Inspired</option>
         </select>
       </div>
-  <!-- Modal Popup for Intro -->
-  <div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="introModalLabel">Welcome to My Portfolio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="d-flex">
-                    <!-- Profile Picture (Left Side) -->
-                    <div class="me-4" style="max-width: 150px;">
-                        <img src="images/images/Profile1.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
-                    </div>
-                    <!-- Description (Right Side) -->
-                    <div>
-                        <p>Hello! I'm John Doe, a passionate software developer with a focus on web technologies. I specialize in HTML, CSS, JavaScript, and React, and I'm excited to share my work with you!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="continueButton" data-bs-dismiss="modal">Continue to Portfolio</button>
-            </div>
+<!-- Intro Popup -->
+<div id="introPopup" class="popup-overlay" onclick="closePopup()">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <div class="popup-header">
+        <h5 class="popup-title">Welcome to My Portfolio</h5>
+        <button id="closePopup" class="popup-close-btn" onclick="closePopup()">×</button>
+      </div>
+      <div class="popup-body">
+        <div class="popup-profile">
+          <img src="images/images/Profile1.jpg" alt="Profile Picture" class="popup-profile-img">
         </div>
+        <div class="popup-description">
+          <p>Hello! I'm <strong>John Doe</strong>, a passionate software developer specializing in web technologies like HTML, CSS, JavaScript, and React. I'm excited to share my work with you!</p>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <button id="continueButton" class="popup-continue-btn" onclick="closePopup()">Continue to Portfolio</button>
+      </div>
     </div>
-</div>
+  </div>
+
+
 
   <div class="container-fluid px-3">
     <!-- Desktop Layout -->
@@ -52,15 +48,22 @@
       <!-- Left Column: Profile and Timeline -->
       <div class="col-lg-3 col-md-4 col-12">
         <!-- Profile Section -->
-        <div class="section bg-light">
-          <h4>Profile</h4>
-          <img src="https://via.placeholder.com/150" alt="User Picture" class="profile-img">
-          <div class="profile-info">
-            <p><strong>Name:</strong> John Doe</p>
-            <p><strong>Email:</strong> johndoe@example.com</p>
-            <p><strong>Phone:</strong> (123) 456-7890</p>
+        <div class="section profile-card">
+            <h4>Profile</h4>
+            <img src="images/images/Profile1.jpg" alt="Profile Picture" class="profile-img">
+            <div class="profile-info">
+              <p><strong>Name:</strong> John Doe</p>
+              <p><strong>Email:</strong> johndoe@example.com</p>
+              <p><strong>Phone:</strong> (123) 456-7890</p>
+              <p><strong>Location:</strong> City, State</p>
+              <p><strong>About Me:</strong> A detail-oriented professional with a commitment to excellence and building lasting client relationships.</p>
+              <div class="portfolio-links">
+                <a href="https://example.com/projects" target="_blank">View Projects</a>
+                <a href="https://linkedin.com/in/johndoe" target="_blank">LinkedIn</a>
+                <a href="https://johndoeportfolio.com" target="_blank">Website</a>
+              </div>
+            </div>
           </div>
-        </div>
 
         <!-- Timeline Section -->
         
@@ -94,24 +97,6 @@
                 <div class="timeline-content">
                   <h5>Achieved Certification A</h5>
                   <p>December 2021</p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-icon">
-                  <i class="fas fa-rocket"></i>
-                </div>
-                <div class="timeline-content">
-                  <h5>Launched Project Alpha</h5>
-                  <p>March 2022</p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-icon">
-                  <i class="fas fa-rocket"></i>
-                </div>
-                <div class="timeline-content">
-                  <h5>Launched Project Alpha</h5>
-                  <p>March 2022</p>
                 </div>
               </div>
               <div class="timeline-item">
@@ -320,34 +305,103 @@
 
         <!-- Certifications and Skills -->
         <div class="row mt-2">
-          <div class="col-lg-6 col-md-6 col-12 section bg-light">
-            <h4>Certifications</h4>
-            <ul class="list-unstyled">
-              <li>Certification A</li>
-              <li>Certification B</li>
-              <li>Certification C</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 col-md-6 col-12 section bg-light">
-            <h4>Skills</h4>
-            <ul class="list-unstyled">
-              <li>Skill 1: HTML</li>
-              <li>Skill 2: CSS</li>
-              <li>Skill 3: JavaScript</li>
-            </ul>
-          </div>
+            <div class="col-lg-6 col-md-6 col-12 section bg-light py-4">
+                <h4 class="text-center mb-4">Certifications</h4>
+                <div class="row g-3">
+                  <!-- Certification Card 1 -->
+                  <div class="col-md-6">
+                    <div class="cert-card">
+                      <div class="cert-img">
+                        <img src="images/images/1486070756_blob.jpg" alt="Certification 1" class="img-fluid">
+                      </div>
+                      <div class="cert-info">
+                        <h5>Certification A</h5>
+                        <p>Issued by: Organization A</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Certification Card 2 -->
+                  <div class="col-md-6">
+                    <div class="cert-card">
+                      <div class="cert-img">
+                        <img src="images/images/Osha.png" alt="Certification 2" class="img-fluid">
+                      </div>
+                      <div class="cert-info">
+                        <h5>Certification B</h5>
+                        <p>Issued by: Organization B</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12 section bg-light">
+                <h4>Skills</h4>
+                <div class="skills-container">
+                  <!-- Left side: Progress Bar Skills -->
+                  <div class="progress-skills">
+                    <div class="skill-card">
+                      <h5>Project Management</h5>
+                      <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;"></div>
+                      </div>
+                    </div>
+                    <div class="skill-card">
+                      <h5>Blueprint Reading</h5>
+                      <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;"></div>
+                      </div>
+                    </div>
+                    <div class="skill-card">
+                      <h5>Construction Safety</h5>
+                      <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                      </div>
+                    </div>
+                    <div class="skill-card">
+                      <h5>Material Procurement</h5>
+                      <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Right side: Additional Skills (Without Progress Bars) -->
+                  <div class="additional-skills">
+                    <h5>Other Skills:</h5>
+                    <ul>
+                      <li>Scheduling and Time Management</li>
+                      <li>Cost Estimating and Bidding</li>
+                      <li>Blueprint Design Assistance</li>
+                      <li>OSHA Compliance</li>
+                      <li>Subcontractor Coordination</li>
+                      <li>Building Codes and Regulations</li>
+                      <li>Equipment Maintenance</li>
+                      <li>Concrete Finishing</li>
+                      <li>Framing and Structural Work</li>
+                      <li>Plumbing and Electrical Knowledge</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              
         </div>
       </div>
     </div>
 
     <!-- Footer -->
     <div class="row mt-3">
-      <div class="col-12 section footer">
-        <h4>Contact & Footer</h4>
-        <p>Thank you for visiting!</p>
-        <p>Email: johndoe@example.com | Phone: (123) 456-7890</p>
+        <div class="col-12 section footer">
+          <h4>Contact & Footer</h4>
+          <p>Thank you for visiting!</p>
+          <p>Email: johndoe@example.com | Phone: (123) 456-7890</p>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/johndoe" target="_blank">GitHub</a> | 
+            <a href="https://twitter.com/johndoe" target="_blank">Twitter</a>
+          </div>
+          <p>&copy; 2024 ACS Results. All Rights Reserved.</p>
+        </div>
       </div>
-    </div>
   </div>
 
   <!-- Bootstrap JS (required for modal functionality) -->

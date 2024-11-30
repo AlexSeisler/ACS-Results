@@ -25,32 +25,95 @@ body {
   }
   
   /* Profile Section */
+/* Profile Section Styles */
+
+  /* General Section Styling */
+.section {
+    background-color: var(--bg-light-color, #f9f9f9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color, #333);
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .section {
+    animation: fadeIn 0.6s ease;
+  }
+  
+  /* Profile Card Specific Sizing */
+  .profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
   .profile-img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     display: block;
     margin: 0 auto 15px;
+    border: 4px solid var(--accent-color, #007bff);
+    object-fit: cover;
+    transition: border-color 0.3s ease, transform 0.3s ease;
   }
   
-  .profile-info p,
-  .list-unstyled li {
+  .profile-img:hover {
+    border-color: var(--hover-color, #0056b3);
+    transform: rotate(10deg);
+  }
+  
+  .profile-info p {
     font-size: 1rem;
+    color: var(--text-color, #666);
+    margin-bottom: 10px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
   }
   
-  .list-unstyled li {
-    margin-bottom: 8px;
-    color: var(--text-color);
-    position: relative;
-    padding-left: 15px;
+  .profile-info p:hover {
+    color: var(--primary-color, #333);
   }
   
-  .list-unstyled li::before {
-    content: "●";
-    color: var(--accent-color);
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
+  .profile-info a {
+    color: var(--accent-color, #007bff);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .profile-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .portfolio-links a {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 0.9rem;
+    color: var(--accent-color, #007bff);
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid var(--accent-color, #007bff);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .portfolio-links a:hover {
+    background-color: var(--accent-color, #007bff);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   /* Timeline Section */
@@ -59,6 +122,8 @@ body {
     flex-direction: column;
     position: relative;
     padding: 20px 0;
+    overflow-y:scroll;
+    max-height: 750px;
   }
   
   .timeline-item {
@@ -226,11 +291,120 @@ body {
     padding: 10px;
     border-radius: 5px;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
   }
   
   .skills-item:hover {
     background: #0056b3;
   }
+  
+  /* New Skills Section Styling */
+/* Skills List Section */
+/* Container for both the progress bar skills and additional skills */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Space between the two sections */
+  }
+  
+  /* Left side - Progress Bar Skills */
+  .progress-skills {
+    flex: 1;
+  }
+  
+  /* Individual Skill Cards (with progress bars) */
+  .skill-card {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Adds space between skills */
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Skill Progress Bar */
+  .skill-bar {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+  }
+  
+  .skill-level {
+    height: 100%;
+    background-color: #28a745; /* Green color for skill progress */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for the skill bar */
+  .skill-card:hover .skill-level {
+    background-color: #007bff; /* Change color on hover */
+  }
+  
+  /* Right side - Additional Skills (No Progress Bars) */
+  .additional-skills {
+    flex: 1;
+    margin-top: 30px;
+  }
+  
+  .additional-skills h5 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .additional-skills ul {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 0;
+  }
+  
+  .additional-skills li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  /* Custom Bullet Points (Checkmarks) */
+  .additional-skills li::before {
+    content: '✔'; /* Use a checkmark icon */
+    position: absolute;
+    left: 0;
+    color: #28a745; /* Green color for checkmark */
+    font-size: 1.2rem;
+    top: 2px;
+  }
+  
+  /* Hover effect for the list items */
+  .additional-skills li:hover {
+    color: #007bff;
+  }
+  
+  .additional-skills li:hover::before {
+    color: #007bff;
+  }
+  
+  /* General Styling for Section */
+  h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  
   
   /* Certifications Section */
   .certifications-list {
@@ -245,44 +419,253 @@ body {
     padding: 10px;
     border-radius: 5px;
     font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .certifications-item:hover {
     background: #0056b3;
+    transform: translateY(-3px);
   }
   
+  /* New Styles for Interactive Cards */
+  .cert-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Base shadow */
+    flex: 1 1 calc(50% - 15px); /* Adjusts to fit two items per row */
+  }
+  
+  .cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Optional shadow effect for the cert-info section */
+  .cert-info {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-top: 1px solid #ddd;
+    text-align: center; /* Align text to the center */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for cert-info */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+  }
+  
+  .cert-info:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow when hovering over the info section */
+  }
+  
+  /* Make all images the same height for uniformity */
+  .cert-img img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniform image size */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cert-info h5 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .cert-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  .cert-info .cert-info-details {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 10px;
+  }
+  
+  
   /* Modal and Custom Styling */
-  .modal-content {
+ /* Modal Content Styling */
+.modal-content {
     background-color: #f8f9fa;
     text-align: center;
     padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
   }
   
-  .modal-header {
-    border-bottom: none;
+  .modal-content:hover {
+    transform: scale(1.02);
   }
   
-  .modal-body .d-flex {
+/* Intro Popup Styling */
+/* Custom Style for Intro Modal */
+/* Popup Overlay (Background) */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 9999; /* Ensure the popup is on top */
+    justify-content: center;
     align-items: center;
-  }
-  
-  .modal-body img {
-    border: 3px solid #007bff;
-    padding: 5px;
-  }
-  
-  .modal-body p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  /* Footer Section */
-  .footer {
-    background-color: #f1f1f1;
+    transition: opacity 0.3s ease;
+}
+
+/* Popup Content Box */
+.popup-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
+    transform: scale(0.95); /* Start slightly smaller for a smooth effect */
+    transition: transform 0.3s ease;
+}
+
+/* Popup Header (Title and Close Button) */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.popup-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.popup-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.popup-close-btn:hover {
+    color: #007bff;
+}
+
+/* Popup Body (Profile and Description) */
+.popup-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.popup-profile {
+    margin-right: 20px;
+}
+
+.popup-profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.popup-profile-img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.popup-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Popup Footer (Continue Button) */
+.popup-footer {
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.popup-continue-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-continue-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Show Popup (Make visible) */
+.popup-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-overlay .popup-content {
+    transform: scale(1); /* Scale to normal size */
+}
+
+
+
+ 
+  
+  /* Footer Section */
+ /* Footer Section */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
   }
+  
+  .footer h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .footer p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .footer .footer-links {
+    margin: 15px 0;
+  }
+  
+  .footer .footer-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer p:last-child {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
   
   /* Carousel Section */
   .carousel-caption {

@@ -1,8 +1,18 @@
-// JavaScript to trigger the modal on page load
+// JavaScript to trigger and close the custom popup
+
+// Show the popup after the page loads
 window.onload = function () {
-    var myModal = new bootstrap.Modal(document.getElementById('introModal'));
-    myModal.show();
-  };
+  setTimeout(function () {
+      document.getElementById("introPopup").classList.add("show");
+  }, 500); // Delay to give the page time to load
+};
+
+// Function to close the popup
+function closePopup() {
+  document.getElementById("introPopup").classList.remove("show");
+}
+
+
   
 /*Themes*/
   document.addEventListener("DOMContentLoaded", () => {

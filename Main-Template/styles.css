@@ -304,100 +304,118 @@ body {
 /* Skills List Section */
 /* Container for both the progress bar skills and additional skills */
 .skills-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Space between the two sections */
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Space between the two sections */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Left side - Progress Bar Skills */
+.progress-skills {
+  flex: 1;
+  min-width: 300px; /* Prevents the column from shrinking too much */
+}
+
+/* Individual Skill Cards (with progress bars) */
+.skill-card {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px; /* Adds space between skills */
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Skill Progress Bar */
+.skill-bar {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background-color: #28a745; /* Green color for skill progress */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover effect for the skill bar */
+.skill-card:hover .skill-level {
+  background-color: #007bff; /* Change color on hover */
+}
+
+/* Right side - Additional Skills (No Progress Bars) */
+.additional-skills {
+  flex: 1;
+  margin-top: 30px;
+  min-width: 300px; /* Prevents the column from shrinking too much */
+}
+
+.additional-skills h5 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.additional-skills ul {
+  list-style-type: none; /* Removes default bullets */
+  padding-left: 0;
+}
+
+.additional-skills li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Custom Bullet Points (Checkmarks) */
+.additional-skills li::before {
+  content: '✔'; /* Use a checkmark icon */
+  position: absolute;
+  left: 0;
+  color: #28a745; /* Green color for checkmark */
+  font-size: 1.2rem;
+  top: 2px;
+}
+
+/* Hover effect for the list items */
+.additional-skills li:hover {
+  color: #007bff;
+}
+
+.additional-skills li:hover::before {
+  color: #007bff;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .skills-container {
+      flex-direction: column; /* Stack items vertically */
+      gap: 15px; /* Reduce gap for smaller screens */
   }
-  
-  /* Left side - Progress Bar Skills */
-  .progress-skills {
-    flex: 1;
-  }
-  
-  /* Individual Skill Cards (with progress bars) */
-  .skill-card {
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 20px; /* Adds space between skills */
-  }
-  
-  .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .skill-card h5 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  /* Skill Progress Bar */
-  .skill-bar {
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    height: 10px;
-    overflow: hidden;
-  }
-  
-  .skill-level {
-    height: 100%;
-    background-color: #28a745; /* Green color for skill progress */
-    transition: width 0.3s ease-in-out;
-  }
-  
-  /* Hover effect for the skill bar */
-  .skill-card:hover .skill-level {
-    background-color: #007bff; /* Change color on hover */
-  }
-  
-  /* Right side - Additional Skills (No Progress Bars) */
+
+  .progress-skills,
   .additional-skills {
-    flex: 1;
-    margin-top: 30px;
+      margin: 0 auto; /* Center-align for better visuals */
+      width: 100%; /* Take full width of the container */
   }
-  
-  .additional-skills h5 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .additional-skills ul {
-    list-style-type: none; /* Removes default bullets */
-    padding-left: 0;
-  }
-  
-  .additional-skills li {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
-  }
-  
-  /* Custom Bullet Points (Checkmarks) */
-  .additional-skills li::before {
-    content: '✔'; /* Use a checkmark icon */
-    position: absolute;
-    left: 0;
-    color: #28a745; /* Green color for checkmark */
-    font-size: 1.2rem;
-    top: 2px;
-  }
-  
-  /* Hover effect for the list items */
-  .additional-skills li:hover {
-    color: #007bff;
-  }
-  
-  .additional-skills li:hover::before {
-    color: #007bff;
-  }
+}
+
   
   /* General Styling for Section */
   h4 {

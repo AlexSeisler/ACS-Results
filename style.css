@@ -142,6 +142,9 @@ button{
         bottom: 40px;
         left: calc(50% - 125px);/*center of screen*/
     }
+    .item2{
+        padding-left:150px;
+    }
 }
 
 .popup1 {

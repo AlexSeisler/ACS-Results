@@ -124,15 +124,16 @@ body {
     flex-direction: column;
     position: relative;
     padding: 20px 0;
-    overflow-y:scroll;
+    overflow-y: scroll;
     max-height: 750px;
+    gap: 20px; /* Space between timeline items */
   }
   
   .timeline-item {
     display: flex;
     align-items: center;
-    margin: 20px 0;
     position: relative;
+    gap: 20px; /* Space between icon and content */
   }
   
   .timeline-item::before {
@@ -147,18 +148,18 @@ body {
   }
   
   .timeline-icon {
-    width: 60px;
-    height: 60px;
-    background: #007bff;
-    color: #fff;
+    width: 60px; /* Uniform width */
+    height: 60px; /* Uniform height */
+    background: #007bff; /* Background color */
+    color: #fff; /* Icon color */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    font-size: 1.5rem;
+    border-radius: 50%; /* Circular background */
+    font-size: 1.5rem; /* Icon size */
     z-index: 1;
-    margin-right: 20px;
     position: relative;
+    flex-shrink: 0; /* Prevent shrinking */
   }
   
   .timeline-content {
@@ -166,6 +167,7 @@ body {
     padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allows content to take remaining space */
   }
   
   .timeline-content h5 {

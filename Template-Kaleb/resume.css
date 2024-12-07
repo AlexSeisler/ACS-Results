@@ -56,7 +56,7 @@ body{
     width: 240px;
     height: 100vh;
     text-align: center;
-    background-color: hsl(340, 64%, 33%);
+    background-color: #16498b;
     padding-right: 9px;
 }
 
@@ -111,6 +111,7 @@ body{
     flex-direction: column;
 }
 .contact{
+    
     margin-top: 13px;
     color: white;
     font-size: 100%;
@@ -122,6 +123,7 @@ body{
 .contact table{
     text-align: left;
     color: white;
+    font-size: small;
    
 }
 
@@ -139,7 +141,7 @@ ion-icon{
 }
 
 .logo{
-    background-image: url('../images/THADDEUS_STEVENS_LOGO_background.webp');
+    background-image: url('../images/ACS-Logo-Background.png');
     width: 100%;
     height: 180px;
     background-position: center;
@@ -214,7 +216,7 @@ ion-icon{
     text-align: center;
     padding: 3px;
     height: fit-content;
-    background-color: #b24f63;
+    background-color: #16498b;
     border-radius: 23px;
     color: white;
 }

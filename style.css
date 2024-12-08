@@ -371,6 +371,12 @@ button{
     background-color: #0e2d55; /* Darker shade for hover */
     transform: scale(1.1); /* Slight enlarge effect */
 }
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .website-button {
+        display: none;
+    }
+}
 
 
 

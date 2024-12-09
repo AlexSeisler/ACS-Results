@@ -426,9 +426,10 @@ button{
         width:500px;
     }
 }
-.tagline{
-    background-image:  linear-gradient(rgba(0,0,0,0.8), rgb(0,0,0,0.7)), url('images/background.webp');
-    background-size:cover;
+
+.tagline {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('images/background.webp');
+    background-size: cover;
     object-fit: contain;
     background-attachment: fixed;
     width: 100%;
@@ -441,7 +442,18 @@ button{
     font-size: 170%;
     letter-spacing: 7px;
     line-height: 270%;
-    color:white;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .tagline {
+        background-attachment: scroll; /* Prevent issues with 'fixed' on mobile */
+        background-size: cover; /* Ensure the background image covers the section */
+        font-size: 150%; /* Slightly smaller font size for better layout on mobile */
+        letter-spacing: 5px; /* Reduce letter spacing for readability */
+        line-height: 200%; /* Adjust line height to prevent overflow */
+        overflow-x: hidden; /* Prevent horizontal overflow on mobile */
+    }
 }
 /*front page*/
     #tag{

@@ -567,102 +567,103 @@ button{
             color: white;
             text-align: center;
         }
-.section2{
-    background-color: rgb(14, 14, 12);
-}
 .section3{
     background-color: rgb(14, 14, 12);
 }
-/* example content section */
-    .section-header{
-        color: #16498b;;
-        font-family: 'Ubuntu';
-        text-align: center;
-        margin: 40px auto;
-        font-size: 5vh;
-    }
-    @media only screen and (max-width: 768px) {
-        .section-header{
-            width: 70%;
-        }
-    }
-    h2:after{
-        display:block;
-        height:2px;
-        width:100px;
-        margin: 10px auto;
-        background-color: #16498b;;
-        content:" ";
-    }
-    .area{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        outline:2px solid white;
-    }
-    .general-templates{
-        display:flex;
-        justify-content: center;
-        padding:20px;
-        gap:20px
-    }
-    /* example website anchors */
-        .overflow-hidden-4x4{
-            position: relative;
-            width: 80%;
-            display: flex;
-            overflow: hidden;
-            border-radius: 10px;
-            
-            
-        }
-        .template{
-            height:300px;
-            width:100%;
-            opacity: 0.7;
-            transform: scale(1.05);
-            overflow:hidden;
-            background-color: #000;
-            transition: transform 0.5s, opacity 0.5s;
-            object-fit: cover;
-            overflow:hidden;
-        }
-        .template:hover{
-            opacity:1;
-            transform: scale(1);
-            overflow:none;
-        }
-        .popup {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #16498b;;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            height:50px;
-            width:200px;
-            font-size: 20px;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .overflow-hidden-4x4:hover .popup {
-            opacity: 1;
-        }
-    
-    @media only screen and (max-width: 768px){
-        .general-templates{
-            display:flex;
-            align-items: center;
-            width: 100%;
-            flex-direction: column;
-        }
+.section2 {
+    background-color: rgb(14, 14, 12);
+    padding: 20px;
+}
 
+.section-header {
+    color: #16498b;
+    font-family: 'Ubuntu';
+    text-align: center;
+    margin: 40px auto;
+    font-size: 5vh;
+}
+
+.area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px; /* Space between columns */
+    justify-content: center;
+    padding: 20px;
+}
+
+.major-column {
+    text-align: center;
+}
+
+.major-header {
+    color: #fff;
+    font-family: 'Ubuntu';
+    margin-bottom: 20px;
+    font-size: 2vh;
+}
+
+.template-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.template {
+    width: 100%;
+    height: 150px;
+    opacity: 0.7;
+    transform: scale(1.05);
+    background-color: #000;
+    transition: transform 0.5s, opacity 0.5s;
+    object-fit: cover;
+}
+
+.template:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #16498b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template-container:hover .popup {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .area {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
     }
+}
+
+@media only screen and (max-width: 768px) {
+    .area {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+
+    .template {
+        height: 100px; /* Adjust image height for smaller screens */
+    }
+}
+ 
     .majors-involved{
         display:flex;
         flex-wrap: wrap;

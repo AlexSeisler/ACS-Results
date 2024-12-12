@@ -114,76 +114,80 @@
     </div>
     <div class="section2" id="section2">
         <h2 class="section-header">Students Portfolios</h2>
-        <div class="area">
-            <!-- Column A -->
-            <div class="major-column">
-                <h3 class="major-header">Carpentry</h3>
-                <div class="template-container">
-                    <a href="Christian-Template/index.html" target="_blank">
-                        <img class="template" src="images/major-a1.png" alt="Carpentry Example 1">
-                        <div class="popup"><h3>View Details</h3></div>
-                    </a>
+        <div class="carousel" id="carousel">
+            <div class="carousel-track">
+
+                <div class="carousel-item">
+                    <div class="left-section">
+                        <div class="template-container">
+                            <a href="Kaleb-Portfolio/index.html" target="_blank">
+                                <img class="template" src="images/Kaleb-full.png" alt="Carpentry Example 1">
+                                <div class="popup" onclick="window.open('Kaleb-Portfolio/index.html', '_blank');"><h3>View Details</h3></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <img src="images/kyle_guy1.webp" alt="Profile Picture">
+                        <h3>Kaleb Backel</h3>
+                        <h4>Major: Welding</h4>
+                        <p>A detail-oriented welding professional with a strong work ethic, leadership experience, and a commitment to continuous improvement.</p>
+                    </div>
                 </div>
-                <div class="template-container">
-                    <a href="major-a2.html" target="_blank">
-                        <img class="template" src="images/major-a2.png" alt="CarpentryExample 2">
-                        <div class="popup"><h3>View Details</h3></div>
-                    </a>
-                </div>
-            </div>
-    
-            <!-- Column B -->
-            <div class="major-column">
-                <h3 class="major-header">Welding</h3>
-                <div class="template-container">
-                    <a href="Kaleb-Portfolio/index.html" target="_blank">
-                        <img class="template" src="images/Kaleb-full.png" alt="Welding Example 1">
-                        <div class="popup"><h3>View Details</h3></div>
-                    </a>
-                </div>
-                <div class="template-container">
-                    <a href="major-b2.html" target="_blank">
-                        <img class="template" src="images/major-b2.png" alt="Welding Example 2">
-                        <div class="popup"><h3>View Details</h3></div>
-                    </a>
-                </div>
-            </div>
-    
-            <!-- Column C -->
-            <div class="major-column">
-                <h3 class="major-header">Residential Remodeling</h3>
-                <div class="template-container">
-                    <a href="Main-Template/index.html" target="_blank">
-                        <img class="template" src="images/Alex-Full.png" alt="Major C Example 1">
-                        <div class="popup"><h3>View Details</h3></div>
-                    </a>
-                </div>
-                <div class="template-container">
-                    <a href="major-c2.html" target="_blank">
-                        <img class="template" src="images/major-c2.png" alt="Major C Example 2">
-                        <div class="popup"><h3>View Details</h3></div>
-                    </a>
+
+                <div class="carousel-item">
+                    <div class="left-section">
+                        <div class="template-container">
+                            <a href="Main-Template/index.html" target="_blank">
+                                <img class="template" src="images/Alex-Full.png" alt="Carpentry Example 2">
+                                <div class="popup" onclick="window.open('Main-Template/index.html', '_blank');"><h3>View Details</h3></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <img src="images/profile1.jpg" alt="Profile Picture">
+                        <h3>Alex Seisler</h3>
+                        <h4>Major: Residential Remodeling</h4>
+                        <p>A driven professional with a commitment to excellence and building lasting client relationships.</p>
+                    </div>
                 </div>
             </div>
-    
-            <!-- Column D -->
-            <div class="major-column">
-                <h3 class="major-header">Architecture</h3>
-                <div class="template-container">
-                    <a href="major-d1.html" target="_blank">
-                        <img class="template" src="images/major-d1.png" alt="Major D Example 1">
-                        <div class="popup"><h3>View Details</h3></div>
-                    </a>
-                </div>
-                <div class="template-container">
-                    <a href="major-d2.html" target="_blank">
-                        <img class="template" src="images/major-d2.png" alt="Major D Example 2">
-                        <div class="popup"><h3>View Details</h3></div>
-                    </a>
-                </div>
+            <div class="carousel-buttons">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
             </div>
         </div>
     </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+    const width = items[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * width}px)`;
+}
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+});
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+});
+
+setInterval(() => {
+    nextButton.click();
+}, 5000); // Auto-scroll every 5 seconds
+
+window.addEventListener('resize', updateCarousel);
+
+    </script>
     
 <!--
     <div class="section3">

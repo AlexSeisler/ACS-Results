@@ -423,83 +423,8 @@ window.addEventListener('resize', updateCarousel);
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        (function(d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function() {
-              window.voiceflow.chat.load({
-                verify: { projectID: '6768c030d33548b049c800ec' },
-                url: 'https://general-runtime.voiceflow.com',
-                versionID: 'production'
-              });
-            }
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-        })(document, 'script');
-      </script>
-
-<script>
-    // JavaScript to handle button click and API integration
-    document.getElementById('call-ai-btn').addEventListener('click', function () {
-      initiateAICall();
-    });
-    function initiateAICall() {
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        // Mobile device, use the tel link
-        window.location.href = "tel:+15703026303";
-    } else {
-        // Desktop device, redirect to desktop app or call app URL
-        window.location.href = "https://teams.microsoft.com/l/meetup-join/273183261025";
-    }
-}
-    function initiateAICall() {
-      const apiUrl = 'https://api.bland.ai/v1/inbound/%2B15703026303'; // Replace with your AI caller's number
-      const apiKey = 'org_fc785bdaef745910583985c69559741ce12e6b848785e3a278a60f81004df166254dbb455c2fc54e8d4a69'; // Replace with your Bland.ai API key
-
-      // Define request options
-      const options = {
-        method: 'POST',
-        headers: {
-          authorization: apiKey,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          prompt: "Handle the call and guide the user through our AI flow.",
-          pathway_id: "<string>", // Replace with your pathway_id or remove if unused
-          voice: "en-US-Wavenet-F", // Set your desired voice
-          background_track: "none", // Options: none, office, cafe, etc.
-          first_sentence: "Hi! How can I assist you today?",
-          wait_for_greeting: true,
-          interruption_threshold: 100,
-          model: "enhanced",
-          language: "en-US",
-          timezone: "America/New_York",
-          transfer_phone_number: null, // Add a transfer number if needed
-          max_duration: 10, // Call duration in minutes
-          record: true, // Set to true if you want to record the call
-          webhook: "https://your-webhook-url.com", // Replace with your webhook URL if needed
-        })
-      };
-
-      // Make API call
-      fetch(apiUrl, options)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`API error: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log('AI Call Initiated:', data);
-          alert('AI call initiated successfully!');
-        })
-        .catch(error => {
-          console.error('Error initiating AI call:', error);
-          alert('Failed to initiate the call. Please try again.');
-        });
-    }
-  </script>
-
-
+    
+    
 <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-logo">

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaleb Backels Portfolio</title>
+  <!-- Link to the Bootswatch Cosmo Theme -->
+  <link href="../bootstrapThemes/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--Back to main button-->
+    <button id="backToMain" class="back-to-main-btn" onclick="window.location.href = 'https://magenta-sopapillas-61a8cc.netlify.app/';">
+      Back to Main
+  </button>
+<!-- Intro Popup -->
+<div id="introPopup" class="popup-overlay" onclick="closePopup()">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <div class="popup-header">
+        <h5 class="popup-title">Welcome to My Portfolio</h5>
+        <button id="closePopup" class="popup-close-btn" onclick="closePopup()">×</button>
+      </div>
+      <div class="popup-body">
+        <div class="popup-profile">
+          <img src="images/images/kyle_guy1.webp" alt="Profile Picture" class="popup-profile-img">
+        </div>
+        <div class="popup-description">
+          <p>Hello! I'm <strong>Kaleb Backel.</strong> I’m a dedicated welder with a passion for precision and craftsmanship. I’m eager to showcase my skills and create quality work that exceeds expectations.</p>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <button id="continueButton" class="popup-continue-btn" onclick="closePopup()">Continue to Portfolio</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container-fluid px-3">
+    <!-- Desktop Layout -->
+    <div class="row">
+      <!-- Left Column: Profile and Timeline -->
+      <div class="col-lg-3 col-md-4 col-12">
+        <!-- Profile Section -->
+        <div class="section profile-card">
+            <h4>Profile</h4>
+            <img src="images/images/kyle_guy2.webp" alt="Profile Picture" class="profile-img">
+            <div class="profile-info">
+              <p><strong>Name:</strong> Kaleb Backel</p>
+              <p><strong>Email:</strong> kbackel4199@stevenscollege.edu</p>
+              <p><strong>Phone:</strong> (484) 123-456</p>
+              <p><strong>Location:</strong> Lancaster, PA</p>
+              <p><strong>About Me:</strong> A detail-oriented welding professional with a strong work ethic, leadership experience, and a commitment to continuous improvement.</p>
+              <div class="portfolio-links">
+                <a href="https://www.instagram.com/fallen4.3/" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/school/thaddeus-stevens-college-of-technology/posts/?feedView=all" target="_blank">LinkedIn</a>
+                <a href="https://x.com/ThaddeusStevens" target="_blank">X</a>
+              </div>
+            </div>
+          </div>
+
+        <!-- Timeline Section -->
+        
+          
+
+        <div class="section timeline bg-light">
+          <h4>Timeline</h4>
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="timeline-content">
+                <h5>Started Welding Program at Thaddeus Stevens College of Technology</h5>
+                <p>August 2022</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <div class="timeline-content">
+                <h5>Summer Internship at Waggoner Fabrication</h5>
+                <p>June - August 2023</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <div class="timeline-content">
+                <h5>Student Body Government President</h5>
+                <p>August 2023 - present</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <div class="timeline-content">
+                <h5>Tour at SWF (Upcoming)</h5>
+                <p>December 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+          
+      </div>
+          
+
+      <!-- Right Column: Projects, Certifications, Skills -->
+      <div class="col-lg-9 col-md-8 col-12">
+        <!-- Projects Showcase -->
+        <div class="container mt-5">
+            <h4 class="text-center mb-4">Projects Showcase</h4>
+            <div class="projects-showcase">
+                <!-- View Showcase Button -->
+                <div class="showcase-item showcase-button">
+                    <button class="btn btn-dark w-100 h-100 py-5 view-showcase-text" data-bs-toggle="modal" data-bs-target="#carouselModal">
+                        View
+                    </button>
+                </div>
+    
+                <!-- Project Images with Different Sizes -->
+                <div class="showcase-item large">
+                  <img src="images/project1(kaleb).jpg" alt="Project 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="0">
+              </div>
+              <div class="showcase-item medium">
+                  <img src="images/project2(kaleb).jpg" alt="Project 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="1">
+              </div>
+              <div class="showcase-item medium">
+                  <img src="images/project6(kaleb).jpg" alt="Project 3" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="2">
+              </div>
+              <div class="showcase-item medium">
+                  <img src="images/project5(kaleb).jpg" alt="Project 4" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="3">
+              </div>
+  
+              <!-- Before and After Pairs -->
+              <div class="showcase-item pair">
+                  <div class="before" data-label="Before">
+                      <img src="images/Before1.webp" alt="Before Image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="4">
+                  </div>
+                  <div class="after" data-label="After">
+                      <img src="images/project3(kaleb).jpg" alt="After Image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="5">
+                  </div>
+              </div>
+  
+              <div class="showcase-item pair">
+                  <div class="before" data-label="Before">
+                      <img src="images/Before-2.png" alt="Before Image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="6">
+                  </div>
+                  <div class="after" data-label="After">
+                      <img src="images/project4(kaleb).jpg" alt="After Image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="7">
+                  </div>
+              </div>
+            </div>
+        </div>
+    
+        <!-- Modal for Carousel -->
+        <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
+            <div class="modal-dialog custom-modal-size">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="carouselModalLabel">Project Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Carousel items -->
+                                <div class="carousel-item active" data-bs-interval="false">
+                                  <img src="images/project1(kaleb).jpg" class="d-block w-100" alt="Project 1">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>Project 1</h5>
+                                      <p>Mig Welding #1</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item" data-bs-interval="false">
+                                  <img src="images/project2(kaleb).jpg" class="d-block w-100" alt="Project 2">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>Project 2</h5>
+                                      <p>Mig Welding #2</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item" data-bs-interval="false">
+                                  <img src="images/project6(kaleb).jpg" class="d-block w-100" alt="Project 3">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>Project 3</h5>
+                                      <p>Mig Welding #3</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item" data-bs-interval="false">
+                                  <img src="images/project5(kaleb).jpg" class="d-block w-100" alt="Project 4">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>Project 4</h5>
+                                      <p>Stick Welding</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item" data-bs-interval="false">
+                                  <img src="images/Before1.webp" class="d-block w-100" alt="Before">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>Before</h5>
+                                      <p>Mig Welding #4</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item" data-bs-interval="false">
+                                  <img src="images/project3(kaleb).jpg" class="d-block w-100" alt="After">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>After</h5>
+                                      <p>Mig Welding #4</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item" data-bs-interval="false">
+                                  <img src="images/Before-2.png" class="d-block w-100" alt="Before">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>Before</h5>
+                                      <p>Stick Welding #2</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item" data-bs-interval="false">
+                                  <img src="images/project4(kaleb).jpg" class="d-block w-100" alt="After">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>After</h5>
+                                      <p>Stick Welding #2</p>
+                                  </div>
+                              </div>
+                            </div>
+                            <!-- Carousel Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript for Carousel Modal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // Attach click event to all project images for carousel modal
+        document.querySelectorAll('.showcase-item img').forEach(image => {
+            image.addEventListener('click', () => {
+                const index = image.getAttribute('data-bs-slide-to'); // Get the data-bs-slide-to attribute
+                const carousel = new bootstrap.Carousel(document.querySelector('#carouselExample'));
+                carousel.to(index); // Set the carousel to the clicked image's index
+
+                const modal = new bootstrap.Modal(document.getElementById('carouselModal'));
+                modal.show(); // Show the modal with the carousel
+            });
+        });
+
+        const modalElement = document.getElementById('carouselModal');
+
+        // Event when modal is hidden
+        modalElement.addEventListener('hidden.bs.modal', function () {
+            // Ensure the backdrop is removed
+            const backdrops = document.querySelectorAll('.modal-backdrop');
+            backdrops.forEach(backdrop => backdrop.remove());
+
+            // Reset the carousel to the first slide
+            const carousel = new bootstrap.Carousel(document.querySelector('#carouselExample'));
+            carousel.to(0);
+
+            // Re-enable scrolling on the main page
+            document.body.classList.remove('modal-open');
+            document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+        });
+
+        // Explicitly handle modal close button to avoid lingering styles
+        const closeButton = document.querySelector('.btn-close');
+        closeButton.addEventListener('click', function () {
+            const modal = bootstrap.Modal.getInstance(modalElement); // Get the modal instance
+            modal.hide(); // Hide the modal explicitly
+        });
+    });
+
+    </script>
+    
+    
+        
+          
+
+        <!-- Certifications and Skills -->
+        <div class="row mt-2">
+            <div class="col-lg-6 col-md-6 col-12 section bg-light py-4">
+                <h4 class="text-center mb-4">Certifications</h4>
+                <div class="row g-3">
+                    <!-- Certification Card 1 -->
+                    <div class="col-md-6">
+                      <a href="https://www.osha.gov/welding-cutting-brazing/standards" target="_blank" class="cert-link">
+                          <div class="cert-card">
+                              <div class="cert-img">
+                                  <img src="https://templates.images.credential.net/16736352391955087617515422471630.png" alt="Certification 1" class="img-fluid">
+                              </div>
+                              <div class="cert-info">
+                                  <h5>OSHA Saftey Certification</h5>
+                                  <p>Issued by: Organization A</p>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              
+                  <!-- Certification Card 2 -->
+                  <div class="col-md-6">
+                      <a href="https://www.aws.org/Certification-and-Education/Education/" target="_blank" class="cert-link">
+                          <div class="cert-card">
+                              <div class="cert-img">
+                                  <img src="https://assentsteel.com/images/us-crt/cwf1.jpg" alt="Certification 2" class="img-fluid">
+                              </div>
+                              <div class="cert-info">
+                                  <h5>AWS Certification</h5>
+                                  <p>Issued by: Organization B</p>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col-lg-6 col-md-6 col-12 section bg-light">
+                <h4>Skills</h4>
+                <div class="skills-container">
+                  <!-- Left side: Progress Bar Skills -->
+                  <div class="progress-skills">
+                    <div class="skill-card">
+                      <h5>MIG Welding</h5>
+                      <div class="skill-bar">
+                        <div class="skill-level" style="width: 100%;"></div>
+                      </div>
+                    </div>
+                    <div class="skill-card">
+                      <h5>TIG Welding</h5>
+                      <div class="skill-bar">
+                        <div class="skill-level" style="width: 100%;"></div>
+                      </div>
+                    </div>
+                    <div class="skill-card">
+                      <h5>Metal Fabrication</h5>
+                      <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                      </div>
+                    </div>
+                    <div class="skill-card">
+                      <h5>Blueprint Reading</h5>
+                      <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Right side: Additional Skills (Without Progress Bars) -->
+                  <div class="additional-skills">
+                    <h5>Other Skills:</h5>
+                    <ul>
+                      <li>Equipment Maintenance</li>
+                      <li>Arc Welding</li>
+                      <li>Structural Fabrication</li>
+                      <li>Safety Protocols</li>
+                      <li>Material Cutting and Shaping</li>
+                      <li>Time Management</li>
+                      <li>Leadership and Team Coordination</li>
+                      <li>Quality Control</li>
+                      <li>OSHA Compliance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="row mt-3">
+      <div class="col-12 section footer">
+        <h4>Contact & Footer</h4>
+        <p>Thank you for visiting!</p>
+        <p>Email: kbackel4199@stevenscollege.edu | Phone: (484) 123-456</p>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/alex_seisler/" target="_blank">LinkedIn</a> | 
+          <a href="https://www.instagram.com/alex_seisler/" target="_blank">Instagram</a> | 
+          <a href="https://x.com/AlexSeisler" target="_blank">X</a>
+        </div>
+        <p>&copy; 2024 ACS Results. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (required for modal functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // JavaScript to open the modal and jump to the clicked image
+  document.querySelectorAll('.clickable-image').forEach((image, index) => {
+    image.addEventListener('click', () => {
+        const carousel = new bootstrap.Carousel(document.querySelector('#carouselExample'));
+        carousel.to(index);  // Jump to the clicked image's position in the carousel
+        var modal = new bootstrap.Modal(document.getElementById('carouselModal'));
+        modal.show(); // Show the modal
+    });
+});
+  </script>
+</body>
+</html>

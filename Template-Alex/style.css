@@ -1,0 +1,661 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Ubuntu';
+    display: flex;
+    font-size: 0.8em;
+}
+
+.mobileStats{
+    display: none;
+    display: flex;
+    color: whitesmoke;
+    justify-content: center;
+}
+
+.mobileStats table{
+    display: none;
+    color:white;
+    text-align: left;
+
+}
+
+.profile-stats{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Disable fixed background on small screens */
+@media screen and (max-width: 768px) {
+    .main-image {
+        background-attachment: scroll;
+    }
+}
+
+/* on smaller screen text size */
+@media only screen and (max-width: 300px){
+    body {font-size: 11px}
+}
+
+@media screen and (min-width: 500px){
+    .left{
+        width: 120px;
+      
+    }
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    width: 20vw;
+    height: 100vh;
+    text-align: center;
+    background-color: #16498b;
+    padding-right: 9px;
+}
+.name{
+    font-size: 200%;
+    margin-top: 22px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.active {
+    background-color: #16498b;
+}
+
+.slideShowHolder{ 
+    /* border: 1px rgb(83, 58, 58) solid; */
+    width: 100%;
+    height: fit-content;
+    margin: 3px auto  23px auto; 
+}
+
+/* Slide show pics */
+.myslide{
+    display: none;
+    opacity: 0;
+    animation: fade 1s ease-in-out;
+    
+}
+
+.myslide img{
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+    border-radius: 10vw;
+}
+
+/* fading animation */
+.fade{
+    animation-name: fade;
+}
+
+@keyframes fade{
+    from {opacity: 0.4;}
+    to { opacity: 1;}
+}
+
+/*  On smaller screens, decrease text size */
+@media only screen and (max-width:300px){
+    body {font-size: 11px}
+}
+
+.left-footer{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+.contact{
+    margin-top: 13px;
+    color: white;
+    font-size: 100%;
+    font-weight: bolder;
+    width: 100%;
+    height: 20vh;
+}
+
+.contact table{
+    text-align: left;
+    color: white;
+   
+}
+
+
+.line{
+    width: 50%;
+    margin: 6px auto 6px auto;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+ion-icon{
+  
+    width: 23px;
+}
+
+.logo{
+    background-image: url('../images/ACS-Logo-Background.png');
+    width: 100%;
+    height: 25vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+.center{
+   
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.main-image{
+    height: 520px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, .5)), 
+    url('../Contracting/project1-6.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding-top: 63px;
+    font-size: 200%;
+    background-attachment: fixed;
+    background-position-y: 50%;
+}
+
+.profile .line{
+    background-color: black;
+    
+}
+
+.profile{
+    text-align: center;
+    margin-bottom: 53px;
+    padding-top:50px;
+}
+
+.options{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex: 0 1 300px;
+    margin-top: -83px;
+}
+
+
+.option{
+    width: 500px;
+    height: 120px;
+    background-color: rgb(255, 255, 255);
+    margin: 17px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px #888888;
+    font-size: 120%;
+}
+
+.option ion-icon{
+    border: black 3px solid;
+    height: 23px;
+    background-color: rgb(255, 255, 255);
+    padding: 13px;
+    border-radius: 26px;
+    margin-left: -12px;
+    margin-top: -12px;
+    float: left;
+}
+
+
+.option p{
+    text-align: center;
+    padding: 3px;
+    height: fit-content;
+    background-color: #16498b;
+    border-radius: 23px;
+    color: white;
+}
+
+.option h2{
+    padding-top: 40px;
+    padding-right: 40px;
+    
+}
+
+.option p:hover{
+    cursor: pointer;
+    background-color: #16498b;
+}
+
+.services{
+    font-size: 300%;
+    margin: 23px 0px 13px 0px;
+    background-color: #fcb900;
+    padding: 23px 0px 23px 0px;
+    color: rgb(66, 55, 11);
+}
+
+.services-margin{
+    margin: 0px 0px 13px 0px;
+}
+
+.article-display{
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
+
+.article-img1{
+    width: 50%;
+    background-image: url('../Contracting/contracting_logo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.article-display p{
+    width: 43%;
+    height: fit-content;
+    padding: 7px;
+    text-align: left;
+    margin: auto;
+    font-size: 180%;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 120%;
+}
+
+.articleBanner{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Contracting/project2-4.jpg') ;
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    font-size: 240%;
+    text-align: center;
+    background-attachment: fixed;
+   
+}
+
+.articleBanner h1{
+    padding-top: 153px;
+}
+
+.galleryHolder{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+}
+
+.gal{
+    /* border: rgb(108, 62, 62) 1px solid; */
+    width: 25%;
+   transition: width 1s;
+   height: 25vh;
+}
+
+.gal:hover{
+    width: 30%;
+}
+
+.gal1{
+    background-image: url('../Contracting/project3-6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.gal2{
+    background-image: url('../Contracting/project1-7.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gal3{
+    background-image: url('../Contracting/project1-10.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gal4{
+    background-image: url('../Contracting/project2-11.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gal5{
+    background-image: url('../Contracting/project3-3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Media query for screens 600px or smaller */
+@media screen and (max-width: 600px) {
+    .left{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        .profile-stats{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .name{
+                text-align: center;
+            }
+            padding: 1vw;
+            gap: 0;
+            .slideShowHolder{
+                margin: 0;
+                .myslide img{
+                    width: 10vh;
+                    height: 10vh;
+                }
+            }
+        }
+    }
+    .mobileStats table{
+        display: flex;
+    }
+
+    body{
+        flex-direction: column;
+       
+    }
+  /* Make the left panel narrower */
+    .left {
+        width: 100%;
+        flex-direction: row;
+        height: 160;
+        .line{
+            display: none;
+        }
+    }
+
+
+   .name{
+    text-align: left;
+    margin-top: 3px;
+   }
+
+    .slideShowHolder{ 
+        width: 120px;
+        margin-top: -1px; 
+        margin-left: 12px;
+        border-color: black;
+    }
+
+    .myslide img{
+        width: 120;
+        height: 120px;
+        margin-left: 12px;
+    }
+
+    .left-footer{
+      display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+
+    /* Center panel takes up remaining width */
+    .center {
+        width: 100%;
+    }
+
+    /* Reduce font size for the main-image text */
+    .main-image {
+        font-size: 1.5rem;
+        height: 300px; /* Adjust height to fit better on smaller screens */
+    }
+
+    /* Adjust option boxes to be smaller and stack vertically */
+    .options {
+        margin-top: -26px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .article-display p{
+        font-size: 100%;
+    }
+
+    /* Reduce size of gallery images */
+    .gal {
+        width: 100%; /* Make each gallery item full-width */
+        transition: 0 0;
+    }
+
+    .gal:hover{
+        width: 100%;
+    }
+
+    .article-display li{
+        font-size: 23px;
+    }
+    .refHolder{
+        display:flex;
+        flex-direction: column;
+        
+
+        
+    }
+    .ref{
+        width: 100%;
+    }
+}
+@media (min-width: 600px) {
+    .references
+    {
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        height:30vh;
+        width:100%;
+        position:relative;
+        right:10%;
+        padding-bottom:75px;
+    }
+    .refHolder {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding:0px;
+        margin:0px;
+
+    }
+    .ref{
+        min-width:20vw;
+        padding:0px;
+        margin:0px;
+    }
+    .services-1
+    {
+        position: relative;
+        bottom:80px;
+        left: 17%;
+    }
+  }
+
+.article-displaySkill{
+    
+    font-size: 130%;
+    text-align: left;
+    /* border: red 1px solid; */
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+@media only screen and (max-width: 600px){
+    .articleBanner{
+        height: 40vh;
+    }
+        
+}
+.article-displaySkill ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 2vw;
+    padding: 2vw;
+    li{
+        min-width: 30%;
+        max-width: 40vw;
+        border: 3px solid darkgray;
+        border-radius: 1vw;
+        padding: 2vw;
+        font-family:'Times New Roman', Times, serif;
+        font-style: italic;
+        flex: 1 0 30%;
+        strong{
+            font-family: 'Ubuntu';
+            font-weight: 700;
+            font-style: normal;
+        }
+    }
+}
+
+.cert-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d5ae44;
+    margin: 5vh 0;
+    width: 100%;
+    height: 90vh;
+}
+.certs{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+}
+
+.certIMG{
+    width: 50%;
+    background-image: url('../Contracting/project2-3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    
+}
+@media only screen and (max-width: 600px) {
+    .certIMG{
+        background-size: cover;
+        background-position: 40%;
+    }
+
+}
+.certLi{
+    width: 50%;
+}
+
+.certs ul{
+    font-size: 190%;
+    padding: 2vw;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.refHolder{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 150px;
+    padding-right:40%;
+}
+
+.ref{
+    width: 35%;
+    min-height: 30vh;
+    max-height: max-content;
+    background-color: rgb(53, 47, 47);
+    margin: 7px;
+    border-radius: 13px;
+    color: white;
+}
+@media only screen and ( max-width: 600px){
+    .refHolder{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom:250px;
+        padding-top:150px;
+        
+    }
+    .ref{
+        width: 75%;
+        min-height: 20vh;
+
+    }
+}
+.refTop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    border-bottom: grey solid 1px;
+}
+
+.refIMG{
+    width: 5vw;
+    height: 5vw;
+    /* background-color: white; */
+    border-radius: 63px;
+    background-image: url('../images/profile_pic_red.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.refName{
+    color: white;
+    font-size: 200%;
+    width: 60%;
+}
+.refRelation{
+    margin-top: 4vh;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    color: white;
+}

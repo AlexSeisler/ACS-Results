@@ -68,5 +68,4 @@ Student Resume / Media Upload
 ## 📖 Related Docs  
 
 - [README.md](./README.md) → Recruiter-facing project overview  
-- [SECURITY.md](./SECURITY.md) → Student data handling practices  
 - [BUSINESS_PLAN/](./BUSINESS_PLAN/) → Business plans and scaling vision  

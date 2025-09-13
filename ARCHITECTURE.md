@@ -1,4 +1,4 @@
-# ACS Results – Architecture Overview 🏗️  
+# ACS Results - Architecture Overview 🏗️  
 
 This document outlines the **system flow** and **technical structure** behind ACS Results.  
 The platform was intentionally lightweight but designed to prove the **portfolio builder concept** and deliver real value to students.  

@@ -83,7 +83,7 @@ ACS-Results/
 - [ARCHITECTURE.md](./ARCHITECTURE.md) → System design and data flow  
 - [SECURITY.md](./SECURITY.md) → Student data handling + safety notes  
 - [BUSINESS_PLAN/](./BUSINESS_PLAN/) → Business plan PDFs and supporting documents  
-- [ARTIFACTS/](./ARTIFACTS/) → Posters, screenshots, and Google Form workflow  
+- [ARTIFACTS/](./ARTIFACTS/) → Campaign Posters
 
 📌 Supporting System: **ACS Results AI** (successor project) → automated portfolio builder & scaling vision.
 
